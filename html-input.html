@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>input</title>
 </head>
 <body>
 
@@ -98,6 +98,18 @@
     <input type="range"  name="range" min="-10" max="10" step="2" value="0" />
     
     <button type="submit">제출 </button>
+</form>
+<br />
+
+<!-- file, hidden type-->
+<!-- file 타입은 파일을 입력 할 때 사용 -->
+<!-- hidden 타입은 화면에 보여주지 않고자 할 때 사용-->
+<form enctype="multipart/form-data"> 
+    <!-- multipart/form-data 를 해야 파일명만 넘어가는게 아니라 파일자체가 넘어감-->
+    <input type="file" name = "file" />
+    <input type="hidden" name="hidden" value="hidden-value" /> 
+    <!-- hidden은 값을 따로 못받으니 기본값은 무조건 걸려있어야함-->
+    <button type="submit"> 제출 </button>
 </form>
 </body>
 </html>
