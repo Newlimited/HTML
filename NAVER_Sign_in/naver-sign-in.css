@@ -1,0 +1,64 @@
+        *{
+            margin : 0; /* 모든방향에서 0이다*/
+        }
+    .header {
+        padding-bottom: 48px; 
+  
+    }
+    .header-inner{
+        position: relative;
+       
+        width: 743px;
+        margin: 0 auto; 
+        /*첫번째자리가 세로방향 두번째자리가 수평자리*/
+        /*세개짜리는 1.위 2.가로 3.아래*/
+        /*네개짜리는 1.위 2.오른쪽 3.아래 4.왼쪽*/
+        padding-top: 108px;
+        text-align: center;
+
+       
+    }
+    .logo{
+        display: inline-block; /*인라인 블럭으로 이미지가떳음*/
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+        /*마진 0이 살아있어서 제대로안됨 그래서 padding을 inner에 넣음*/
+        background-size: 244px 107px;
+        background-position: 0 -51px; /*왼쪽 위*/
+        background-repeat: no-repeat; /*반복 x */
+        width: 155px;
+        height: 30px;
+    }
+    .lang{
+        position: absolute;  
+        color: #333;
+        top: 20px;
+        right: 0px;
+    }
+    .blind{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden; 
+        /*overflow : width 와 height 가있을때 글자나 이미지가 초과햇을경우 어떻게 할것인가*/
+    }
+    .select{
+        position: relative;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 4px 10px 6px 8px;
+        line-height: 18px; /*문장의 여백*/
+        width: 100%; /*부모의 width를 따라감*/
+        min-width: 95px; /*최소사이즈 반응형일경우 최소 95px 이하로 안떨어지게*/
+        height: 30px;
+        color: #333; /*#333333 이랑 동일함*/
+        border: 1px solid #ccc;
+        border-radius: 0; /*꼭짓점 부드럽게*/
+        cursor:pointer; /*마우스 커서에 대한 디자인*/
+        z-index: 1; 
+        /*div가 차곡차곡 위로 쌓이는 형태인데 층수를 말해주는거라 보면됨*/
+        /*높을 수록 위에 표시됨*/
+    } 
+    .btn-login{
+        display: block;
+        background-color: #03c75a;
+    }

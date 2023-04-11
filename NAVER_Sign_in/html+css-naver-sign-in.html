@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 로그인 </title>
+    <link rel="stylesheet" href="./naver-sign-in.css">
+    </head>
+<body>
+    <!-- Header-->
+    <Header class="header">
+        <div class="header-inner">
+            <a href="https://www.naver.com" class="logo">
+            <h1 class="blind">NAVER</h1>
+        </a>
+        <div class="lang">
+            <select class="select">
+                <option>한국어</option>
+                <option>English</option>
+            </select>
+        </div>
+        </div>
+    </Header>
+     <!-- Main-->
+    <Main class="main">
+        <div class="content">
+            <!-- 로그인 wrap-->
+            <div class="sign-in-wrap">
+                <form action="https://nid.naver.com/nidlogin.login" method="POST">
+                    <button type="submit" class="btn-login" id="log.login">
+                        로그인
+                    </button>
+                </form>
+                <!-- 페이지 이동 navigation-->
+                <ul class="menu_wrap" role="tablist">
+                    <li class="menu_item"></li>
+
+                </ul>
+                <!-- 광고배너-->
+                <div class="banner-wrap"></div>
+            </div>
+        </div>
+    </Main>
+     <!-- Footer-->
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
