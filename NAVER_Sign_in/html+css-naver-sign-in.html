@@ -26,24 +26,93 @@
     <Main class="main">
         <div class="content">
             <!-- 로그인 wrap-->
-            <div class="sign-in-wrap">
+            <div class="sign-in-wrapper">
                 <form action="https://nid.naver.com/nidlogin.login" method="POST">
-                    <button type="submit" class="btn-login" id="log.login">
-                        로그인
-                    </button>
-                </form>
-                <!-- 페이지 이동 navigation-->
-                <ul class="menu_wrap" role="tablist">
-                    <li class="menu_item"></li>
+                    <ul class="panel-wrapper">
+                        <li class="panel-item">
+                            <div class="panel-inner">
+                                <!-- Id Password wrapper-->
+                                <div class="id-password-wrapper">
+                                    <div class="input-row" >
+                                        <div class="icon-cell">
+                                            <span class="icon-id">
+                                                <span class="blind">아이디</span>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="input-text" maxlength="41" placeholder="아이디" name ="id" id="id" />
+                                        <!-- placeholder : 뭐넣어야할지 알려주는거..-->
 
+                                    </div>
+                                    <div class="input-row">
+                                        <div class="icon-cell">
+                                            <span class="icon-pw">
+                                            <span class="blind"> 비밀번호 </span>   
+                                            </span>
+                                        </div>
+                                    <input type="text" class="input-text" placeholder="비밀번호" maxlength="16" name="pw" id="pw" />
+                                </div>
+
+                            </div>
+                            <!-- sign in keep wrapper-->
+                            <div class="sign-in-keep-wrapper">
+                                <div class="keep-check">
+                                <input type="checkobx" id="keep" value="off" class="input-keep"/>
+                                <label class="keep-text">로그인 상태유지 </label>
+                            </div>
+                        </div>
+                            <!-- sign-in-button-wrapper -->
+                            <div class="sign-in-button-wrapper">
+                            <button type="submit" class="sign-in-button" id="log.login">
+                               <span class="button-text">로그인</span>
+                            </button>
+                        </div>
+                        </li>
+                    </ul>
+                </form>
+                </div>
+                <!-- 페이지 이동 navigation-->
+                <ul class="find-wrapper" role="tablist">
+                    <li>
+                        <a class="find-text" href="https://nid.naver.com/user2/api/route?m=routePwInquiry&amp;lang=ko_KR">비밀번호찾기</a>
+                    </li>
+                    <li>
+                        <a class="find-text" href=https://nid.naver.com/user2/api/route?m=routeIdInquiry&amp;lang=ko_KR">아이디찾기</a>
+                    <li>
+                        <a class="find-text" href="https://nid.naver.com/user2/V2Join?m=agree&amp;lang=ko_KR">회원가입</a>
+                    </li>
                 </ul>
-                <!-- 광고배너-->
-                <div class="banner-wrap"></div>
+                <!-- 광고배너-->  
+                <div class="banner-wrapper">
+                    <div class="banner-content">
+                        <img class="banner-img" src="https://ssl.pstatic.net/melona/libs/1378/1378592/fe1b4bd9453e84b57ed7_20230407151920279.jpg" />
+                    </div>
+                </div>
             </div>
         </div>
     </Main>
      <!-- Footer-->
     <footer class="footer">
+        <div class="footer-inner">
+            <ul class="footer-link">
+                <li><a class="footer-item"><span class="text">이용약관</span></a></li>
+                <li><a class="footer-item"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                <li><a class="footer-item"><span class="text">책임의 한계와 법적고지</span></a></li>
+                <li><a class="footer-item"><span class="text">회원정보 고객센터</span></a></li>
+            
+</ul>
+            <div class="footer-copy">
+                <a href="https://www.navercorp.com">
+                    <span class="footer-logo">
+                        <span class="blind">네이버</span>
+                    </span>
+                </a>
+                <span class="text">Copyright</span>
+                <span class="corp">© NAVER Corp.</span>
+                <span class="text">All Rights Reserved.</span>
+
+
+            </div>
+        </div>
 
     </footer>
 </body>
