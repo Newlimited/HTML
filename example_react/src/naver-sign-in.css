@@ -1,0 +1,341 @@
+     *{
+            margin : 0; /* 모든방향에서 0이다*/
+        }
+    .header {
+        padding-bottom: 48px;
+        box-sizing: border-box;
+  
+    }
+    .header-inner{
+        position: relative;
+        
+        margin: 0 auto; 
+        /*첫번째자리가 세로방향 두번째자리가 수평자리*/
+        /*세개짜리는 1.위 2.가로 3.아래*/
+        /*네개짜리는 1.위 2.오른쪽 3.아래 4.왼쪽*/
+        padding-top: 108px;
+        text-align: center;   
+        width: auto;    
+    }
+    button{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    input{
+        border-radius: 0;
+        border: none;
+        background: 0 0;
+        outline: 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .logo{
+        display: inline-block; /*인라인 블럭으로 이미지가떳음*/
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+        /*마진 0이 살아있어서 제대로안됨 그래서 padding을 inner에 넣음*/
+        background-size: 244px 107px;
+        background-position: 0 -51px; /*왼쪽 위*/
+        background-repeat: no-repeat; /*반복 x */
+        width: 155px;
+        height: 30px;
+    }
+    .lang{
+        position: absolute;  
+        color: #333;
+        top: 20px;
+        right: 0px;
+    }
+    .blind{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden; 
+        /*overflow : width 와 height 가있을때 글자나 이미지가 초과햇을경우 어떻게 할것인가*/
+    }
+    .select{
+        position: relative;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 4px 10px 6px 8px;
+        line-height: 18px; /*문장의 여백*/
+        width: 100%; /*부모의 width를 따라감*/
+        min-width: 95px; /*최소사이즈 반응형일경우 최소 95px 이하로 안떨어지게*/
+        height: 30px;
+        color: #333; /*#333333 이랑 동일함*/
+        border: 1px solid #ccc;
+        border-radius: 0; /*꼭짓점 부드럽게*/
+        cursor:pointer; /*마우스 커서에 대한 디자인*/
+        z-index: 1; 
+        /*div가 차곡차곡 위로 쌓이는 형태인데 층수를 말해주는거라 보면됨*/
+        /*높을 수록 위에 표시됨*/
+    } 
+    .sign-in-wrapper{
+        margin: 0 auto;
+        width: 460px;
+        box-sizing: border-box;
+       
+    }
+    .panel-wrapper{
+        position: relative;
+        z-index: 3;
+        margin-top: -8px; /*위로 살짝 올려서 부드럽게 만들어줌*/
+        
+    }
+   .panel-item{
+    border: 1px solid #c6c6c6;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px 0 rgba(68, 68, 68, 0.04); /*위 왼쪽 아래 오른쪽*/
+   }
+   .panel-inner{
+    padding: 20px 28px;
+   }
+   .input-row{
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: -webkit-fill-available;
+    height: 100%;
+    border: 1px solid #dadada;
+    padding: 14px 17px 13px; /*위 좌우 아래*/
+    box-sizing: border-box;
+    
+   }
+ .input-row+.input-row{
+    margin-top: -1px;
+ }
+    .input-row:first-child{
+        border-radius: 6px 6px 0 0;
+        margin-top: -1px;      
+    }
+    .input-row:last-child{
+        border-radius: 0 0 6px 6px;
+        box-shadow: none;
+    }
+    .icon-cell{
+        display: table-cell;
+        width: 24px;
+        vertical-align: middle;
+    }
+    .icon-id{
+        position: absolute;
+        top:50%;
+        left: 17px;
+        margin-top: -8px;
+        background-position: -93px -203px;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+        background-size: 266px 225px;
+    }
+    .icon-pw{
+        position: absolute;
+        top: 50%;
+        left: 17px;
+        margin-top: -8px;
+        background-position: -129px -203px;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+        background-size: 266px 225px;
+    }
+    .input-text{
+        position: relative;
+        width: -webkit-fill-available;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: -0.5px; /*문자사이 간격*/
+        color: #222;
+        box-sizing: border-box;
+        z-index: 4;
+        display: table-cell;
+        padding-right: 30px;
+    }
+    .sign-in-keep-wrapper{
+        position: relative;
+        margin-top: 13px;
+        padding-right: 90px;
+
+    }
+    
+    .keep-check{
+        position: relative;
+        padding-left: 23px;
+           }
+    .ip-check{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 38px;
+    }
+    .input-keep{
+       position: absolute;
+       top: 2px;
+       left: 3px;
+       width: 15px;
+       height: 15px; 
+    }
+    .keep-text::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: -244px -87px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+        background-size: 266px 225px;
+    }
+    .keep-text{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #777;
+    }     
+    .sign-in-button-wrapper{
+        margin-top: 38px;
+      
+    }
+.sign-in-button{
+    display: block;
+    width: -webkit-fill-available;
+    padding: 13px 0 13px;
+    background-color: #03c75a;
+    border-radius: 6px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+.button-text{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+
+}
+.find-wrapper{
+    padding: 20px 0 35px;
+    text-align: center;
+}
+.find-wrapper li{
+    position: relative;
+    display: inline-block;
+}
+.find-text{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #888;
+    vertical-align: top;
+}
+.find-wrapper li+li{
+    padding-left: 28px;
+}
+.find-wrapper li+li ::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    width: 1px;
+    height: 12px;
+    border-radius: 0.5px;
+    background-color: #dadada;
+
+}
+.banner-wrapper{
+    width: 460px;
+    height: 147px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.banner-content{
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    margin: 0 auto;    
+}
+.banner-img{
+    width: 460px;
+}
+.footer{
+    padding: 63px 0 32px;
+    box-sizing: border-box;
+
+}
+.footer-inner{
+    position: relative;
+    text-align: center;
+}
+.footer-link li{
+    display: inline-block;
+}
+.text{
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.5px;
+    color: #888;
+}
+.footer-link li+li {
+    position: relative;
+    padding-left: 13px;
+}
+.footer-link li+li ::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 1px;
+    height: 11px;
+    background-color: #dadada;
+}
+.footer-logo{
+    display: inline-block;
+    vertical-align: top;
+    background-position: -157px -51px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 15px;
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+    background-size: 244px 107px;
+}
+.footer-copy{
+    padding: 0 2px;
+    font-weight: 500;
+    color: #000;
+    line-height: 16px;
+    font-family: -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+.footer .footer-link +.footer-copy{
+    margin-top: 9px;
+}
+.footer-item{
+    display: inline-block;
+    vertical-align: top;
+}
+.sign-in-error{
+    position: relative;
+    min-height: 34px;
+    margin: 24px 0 -24px;
+    padding-right: 40px;
+}
+.error-message{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.5px;
+    color: #ff003e;
+    vertical-align: middle;
+}
