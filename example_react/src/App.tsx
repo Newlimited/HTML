@@ -2,13 +2,26 @@ import { useState } from 'react';
 import './naver-sign-in.css';
 
 import './App.css';
+import { useRef } from 'react';
 
 // App.tsx 
 // tsx : typescript XML(XHTML)
 function App() {
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [isIdCheck, setIdCheck] = useState<boolean>(false);
+  //useState는 const 로 받는게 제일 명확하다.
+  const [id, setId] = useState<string>('');
 
-  const onSubmitHandler = () => { }
+  // id 에 입력을 받아서 저장해야한다.  setId는 값을 변경하는곳 
+  const onSubmitHandler = () => {
+    if (!id.trim()) {
+      setIdCheck(true); // isIdCheck 가 빈값인 경우에 표시
+      return;
+    }
+    setIdCheck(false);
+    if (formRef) formRef.current?.submit();
+  }
+
   return (
     <>
       <div className="header">
@@ -29,7 +42,8 @@ function App() {
         <div className="content">
 
           <div className="sign-in-wrapper">
-            <form id="form" action="https://nid.naver.com/nidlogin.login" method="POST">
+            <form ref={formRef}
+              id="form" action="https://nid.naver.com/nidlogin.login" method="POST">
               <ul className="panel-wrapper">
                 <li className="panel-item">
                   <div className="panel-inner">
@@ -41,7 +55,13 @@ function App() {
                             <span className="blind">아이디</span>
                           </span>
                         </div>
-                        <input type="text" className="input-text" maxLength={41} placeholder="아이디" name="id" id="id" />
+                        <input
+                          type="text"
+                          className="input-text"
+                          maxLength={41}
+                          placeholder="아이디"
+                          name="id"
+                          onChange={(event) => setId(event?.target.value)} />
 
 
                       </div>
