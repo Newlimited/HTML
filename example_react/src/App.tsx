@@ -71,7 +71,7 @@ function App() {
                             <span className="blind"> 비밀번호 </span>
                           </span>
                         </div>
-                        <input type="text" className="input-text" placeholder="비밀번호" maxLength={16} name="pw" id="pw" />
+                        <input type="password" className="input-text" placeholder="비밀번호" maxLength={16} name="pw" id="pw" />
                       </div>
 
                     </div>
