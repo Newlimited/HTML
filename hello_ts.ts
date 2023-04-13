@@ -66,3 +66,13 @@ interface Object4{ // 객체 타입을 두개 합칠 수도 있다.
 }
 const object4 : Object3 & Object4 ={prop1: 'prop1', prop2:2, prop3:'prop3', prop4:2 }
 // 이렇게 다 적어줘야함
+
+// 4. enum 열거형 타입 (이놈~~~)
+enum Fruits {
+    APPLE = '사과',
+    BANANA = '바나나',
+    MELON = '메론'
+
+}
+const fruit : Fruits = Fruits.APPLE; // 어떤녀석을 넣을지 확실히 정해줘야함
+console.log(fruit) 
